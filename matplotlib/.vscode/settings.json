@@ -1,0 +1,5 @@
+{
+    "terminal.explorerKind": "external",
+    "runInTerminal.clearBeforeRun": false,
+    "code-runner.runInTerminal": true
+}
