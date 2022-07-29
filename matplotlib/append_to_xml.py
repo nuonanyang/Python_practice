@@ -53,8 +53,8 @@ def append_XML(name_pre,i,n_1,n_11,n):
         # f.write(domTree.toprettyxml(indent="  "))
     
 
-if __name__ == '__main__':
-    append_XML("看到家",22,"shangyihang","xiayihang","benhang")
+# if __name__ == '__main__':
+#     append_XML("看到家",22,"shangyihang","xiayihang","benhang")
 
 
 
