@@ -46,7 +46,8 @@ def run_game():
         gf.update_bullets(aliens,bullets)
         
         gf.update_aliens(ai_settings,aliens)
-        
+      
+               
         #每次循环时都重绘屏幕
 
         gf.update_screen(ai_settings,screen,ship,aliens,bullets)
