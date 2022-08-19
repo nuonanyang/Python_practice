@@ -1,34 +1,32 @@
-from matplotlib.pyplot import get
 
+from gettext import find
+import sys, getopt
 
-def my_func():
-    lis = []
-    dic = dict()
-    res = lis + ['get', 'func', 'vars']
-    words = "Life is short, You need Python!"
-    print(words)
- 
- 
-def creat_nodes(dom,r_node,n_1,name):
-    lineup = dom.createElement(name)
-    name_text_value = dom.createTextNode(n_1)
-    lineup.appendChild(name_text_value)  # 把文本节点挂到name_node节点
-    r_node.appendChild(lineup)
-    return lineup
-
- 
-def get_func_varnames(func):
-    func_vars = func.__code__.co_varnames
-    print(func_vars[4])
- 
- 
-# if __name__ == "__main__":
-get_func_varnames(creat_nodes)
-
-def c_nodes(dom,r_node,n_1,name):
-    fnode_name = creat_nodes()
+def main(argv):
+    inputfile = ''
+    outputfile = ''
+    find_con = ''
+    try:
+        opts, args = getopt.getopt(argv,"hi:o:f:",["ifile=","ofile=","find_c="])
+    except getopt.GetoptError:
+        # print ('test.py -i <inputfile> -o <outputfile>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            # print ('test.py -i <inputfile> -o <outputfile>')
+            sys.exit()
+        elif opt in ("-i", "--ifile"):
+            inputfile = arg
+        elif opt in ("-o", "--ofile"):
+            outputfile = arg
+        elif opt in ("-f", "--find_c"):
+            find_con = arg
     
-    lineup = dom.createElement(name)
-    name_text_value = dom.createTextNode(n_1)
-    lineup.appendChild(name_text_value)  # 把文本节点挂到name_node节点
-    fnode_name.appendChild(lineup)
+    print ('输入的文件为：', inputfile)
+    print ('输出的文件为：', outputfile)
+    print ('查找的内容为：', find_con)
+    if find_con == '':
+        print("find_con is null")
+
+if __name__ == "__main__":
+    main(sys.argv[1:]) 
