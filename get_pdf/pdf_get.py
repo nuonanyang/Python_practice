@@ -109,9 +109,7 @@ def get_option():
 
 if __name__ == '__main__':
     in_file,out_file,find_c = get_arg(sys.argv[1:])
-    print("*****************") 
-    print(in_file,out_file,find_c)
-    print("*****************") 
+   
     option = get_option()
     # if len(sys.argv) >= 2:
     #     # global arg1

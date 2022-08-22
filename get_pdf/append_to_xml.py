@@ -54,11 +54,11 @@ class Write_xml():
         customer_node = domTree.createElement("frame")
         customer_node.setAttribute("ID", str(self.line_number))
 
-        if self.option == 1:
+        if self.option == "1":
             print("")
-        elif self.option == 2:
+        elif self.option == "2":
             self.creat_nodes(domTree,customer_node,self.line_up,"line_up")
-        elif self.option == 3:
+        elif self.option == "3":
             self.creat_nodes(domTree,customer_node,self.line_next,"line_next")
      
      

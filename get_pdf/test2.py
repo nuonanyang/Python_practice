@@ -5,6 +5,9 @@ class Father(object):
         # print ( "name: %s" %( self.name) )
     def getName(self):
         return 'Father ' + self.name
+    
+    def getTest(self):
+        print("test")
  
 class Son(Father):
     def getName(self):
@@ -18,6 +21,11 @@ if __name__=='__main__':
         opt = Son
     elif arg1 == "2":
         opt = Father
-        
+    print(opt)
     s = opt("runoob")
     print(s.getName())
+    print("****************")
+    print(s.getTest())
+    son=Son('runoob')
+    print("________________________")
+    print(son.getTest())
